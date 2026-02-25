@@ -613,6 +613,23 @@ img {
   transform: scale(1.07);
 }
 
+.image-placeholder {
+  height: 13.6rem;
+  border-radius: 14px;
+  background: var(--card);
+  border: 2px dashed var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-soft);
+  font-size: 0.875rem;
+  transition: background 0.3s var(--ease);
+}
+
+.media-card:hover .image-placeholder {
+  background: var(--bg-soft);
+}
+
 .card-content {
   margin-top: 0.9rem;
 }
