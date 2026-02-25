@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vivero futurista con identidad neon, experiencia inmersiva y diseno premium." />
+  <title>NEON VERDE - Vivero Futurista</title>
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const theme = savedTheme || (prefersDark ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Syncopate:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="intro-screen" id="introScreen" aria-hidden="true">
+    <div class="intro-leaves">
+      <svg class="intro-leaf intro-leaf-1" viewBox="0 0 120 120"><path d="M108 14C55 19 21 49 12 105c58-9 87-43 96-91z"/></svg>
+      <svg class="intro-leaf intro-leaf-2" viewBox="0 0 120 120"><path d="M104 15C52 23 25 52 16 106c55-6 86-37 88-91z"/></svg>
+      <svg class="intro-leaf intro-leaf-3" viewBox="0 0 120 120"><path d="M101 18C48 25 19 59 16 110c58-6 87-40 85-92z"/></svg>
+    </div>
+    <p class="intro-brand">NEON VERDE</p>
+  </div>
+
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a href="#inicio" class="brand">
+      <span class="brand-mark">NV</span>
+      <span class="brand-text">Neon Verde</span>
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-label="Abrir menu">
+      <span></span><span></span>
+    </button>
+    <nav class="main-nav">
+      <a href="#esencia">Esencia</a>
+      <a href="#categorias">Categorias</a>
+      <a href="#asesoramiento">Asesoramiento</a>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#contacto">Contacto</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+        <span class="toggle-thumb"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-bg parallax-layer" data-parallax-speed="0.12"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-particles" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <div class="hero-content reveal show-on-load">
+        <p class="kicker">Vivero Neon Boutique</p>
+        <h1>Cultivamos naturaleza</h1>
+        <p>
+          Un vivero tradicional donde cada planta crece con dedicacion y experiencia.
+        </p>
+        <div class="hero-actions">
+          <a href="#categorias" class="btn btn-primary ripple-btn">Ver catalogo</a>
+          <a href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20asesoria%20de%20Neon%20Verde." target="_blank" rel="noopener noreferrer" class="btn btn-ghost ripple-btn">Agendar asesoria</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <section id="esencia" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">Nuestra esencia</p>
+          <h2>Marca botanica de identidad digital fuerte.</h2>
+        </div>
+        <div class="essence-grid">
+          <article class="card reveal">
+            <h3>Curaduria inteligente</h3>
+            <p>Seleccionamos especies por luz, arquitectura y ritmo del espacio para lograr impacto visual duradero.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Estetica futurista</h3>
+            <p>Lineas limpias, textura organica y acentos neon para una experiencia premium sin excesos.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Cuidado acompanado</h3>
+            <p>Guias postventa y seguimiento de crecimiento para mantener plantas fuertes todo el ano.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <section id="categorias" class="section">
+      <div class="container categories-stack">
+        <article class="category-block category-interior reveal" id="categoria-interior">
+          <div class="section-head reveal">
+            <p class="kicker">Interior</p>
+            <h2>Plantas para interior</h2>
+            <p>Especies que se adaptan a espacios cerrados, con luz natural y cuidados sencillos.</p>
+          </div>
+          <div class="category-grid">
+            <article class="card media-card reveal">
+              <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=1200&q=80" alt="Plantas de interior" />
+              <div class="card-content">
+                <h3>Plantas de interior</h3>
+                <p>Variedades resistentes para livings, escritorios y dormitorios.</p>
+              </div>
+            </article>
+            <article class="card media-card reveal">
+              <img src="https://images.unsplash.com/photo-1463936575829-25148e1db1b8?auto=format&fit=crop&w=1200&q=80" alt="Plantas decorativas" />
+              <div class="card-content">
+                <h3>Plantas decorativas</h3>
+                <p>Texturas y formas para aportar identidad visual a tus ambientes.</p>
+              </div>
+            </article>
+            <article class="card media-card reveal" id="categoria-luz-indirecta">
+              <img src="https://images.unsplash.com/photo-1470246973918-29a93221c455?auto=format&fit=crop&w=1200&q=80" alt="Plantas de sombra o luz indirecta" />
+              <div class="card-content">
+                <h3>Sombra y luz indirecta</h3>
+                <p>Opciones ideales para rincones con iluminacion suave y estable.</p>
+              </div>
+            </article>
+            <article class="card media-card reveal" id="categoria-poca-luz">
+              <img src="https://images.unsplash.com/photo-1593691509543-c55fb32f7edc?auto=format&fit=crop&w=1200&q=80" alt="Macetas y accesorios de interior" />
+              <div class="card-content">
+                <h3>Macetas y accesorios interior</h3>
+                <p>Complementos funcionales para cuidado, riego y presentacion.</p>
+              </div>
+            </article>
+          </div>
+        </article>
+
+        <article class="category-block category-exterior reveal" id="categoria-mucho-sol">
+          <div class="section-head reveal">
+            <p class="kicker">Exterior</p>
+            <h2>Plantas y arboles para exterior</h2>
+            <p>Variedades que necesitan sol directo, aire libre y espacio para desarrollarse plenamente.</p>
+          </div>
+          <div class="category-grid">
+            <article class="card media-card reveal">
+              <img src="https://images.unsplash.com/photo-1512428813834-c702c7702b78?auto=format&fit=crop&w=1200&q=80" alt="Arboles y frutales" />
+              <div class="card-content">
+                <h3>Arboles y frutales</h3>
+                <p>Especies productivas y ornamentales para patios amplios y quintas.</p>
+              </div>
+            </article>
+            <article class="card media-card reveal">
+              <img src="https://images.unsplash.com/photo-1522844990619-4951c40f7eda?auto=format&fit=crop&w=1200&q=80" alt="Arbustos" />
+              <div class="card-content">
+                <h3>Arbustos</h3>
+                <p>Volumen y estructura verde para delimitar y jerarquizar jardines.</p>
+              </div>
+            </article>
+            <article class="card media-card reveal">
+              <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1200&q=80" alt="Flores de temporada" />
+              <div class="card-content">
+                <h3>Flores de temporada</h3>
+                <p>Color estacional con floraciones pensadas para exterior pleno.</p>
+              </div>
+            </article>
+            <article class="card media-card reveal">
+              <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=80" alt="Plantas de jardin" />
+              <div class="card-content">
+                <h3>Plantas de jardin</h3>
+                <p>Selecciones para canteros, bordes y paisajismo contemporaneo.</p>
+              </div>
+            </article>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <section id="asesoramiento" class="section advice-section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">Asesoramiento</p>
+          <h2>Elegi la planta adecuada para tu espacio</h2>
+          <div class="advice-selectors" role="group" aria-label="Selector de luz">
+            <button type="button" class="card advice-option" data-option="Mucho sol" aria-pressed="false">Mucho sol</button>
+            <button type="button" class="card advice-option" data-option="Luz indirecta" aria-pressed="false">Luz indirecta</button>
+            <button type="button" class="card advice-option" data-option="Poca luz" aria-pressed="false">Poca luz</button>
+          </div>
+          <p>No todas las plantas se adaptan a cualquier entorno. Te orientamos segun la luz, el espacio y el tipo de ambiente que tengas.</p>
+        </div>
+        <div class="advice-cta reveal">
+          <button type="button" id="adviceSubmit" class="btn btn-primary ripple-btn" disabled>Quiero asesoramiento</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <section id="beneficios" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">Beneficios</p>
+          <h2>Servicio moderno para clientes exigentes.</h2>
+        </div>
+        <div class="benefit-grid">
+          <article class="card reveal">
+            <span class="icon">01</span>
+            <h3>Entrega urbana</h3>
+            <p>Logistica eficiente con embalaje protegido para plantas delicadas.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon">02</span>
+            <h3>Pagos digitales</h3>
+            <p>Transferencia, tarjetas y billeteras con proceso rapido y seguro.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon">03</span>
+            <h3>Asesoria tecnica</h3>
+            <p>Recomendaciones personalizadas por clima, luz y habitos de cuidado.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <section id="contacto" class="section">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <p class="kicker">Contacto</p>
+          <h2>Visita nuestro laboratorio botanico.</h2>
+          <div class="store-status" id="storeStatus" aria-live="polite">
+            <span class="status-dot"></span>
+            <span class="status-text">Cargando estado...</span>
+          </div>
+
+          <div class="contact-meta-grid">
+            <article class="card contact-meta-card">
+              <h3>Horario</h3>
+              <p>Lun - Sab: 09:00 - 19:00</p>
+              <p>Dom: 10:00 - 14:00</p>
+            </article>
+            <a href="https://wa.me/5491100000000?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20sus%20plantas." target="_blank" rel="noopener noreferrer" class="card contact-meta-card whatsapp-card">
+              <h3>WhatsApp</h3>
+              <p>Escríbenos para más información</p>
+            </a>
+          </div>
+        </div>
+        <div class="contact-media reveal">
+          <iframe title="Mapa del vivero" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39245.80700962362!2d-71.56514605818765!3d-41.96566436457509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x961bbe292d49ca89%3A0xa4fcd4026336e0f6!2zRWwgQm9sc8OzbiwgUsOtbyBOZWdybw!5e1!3m2!1ses-419!2sar!4v1771967135236!5m2!1ses-419!2sar" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>NEON VERDE - Vivero Futurista</p>
+    <div class="footer-links">
+      <a href="#">Instagram</a>
+      <a href="#">Pinterest</a>
+      <a href="#">WhatsApp</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
