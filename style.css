@@ -769,6 +769,46 @@ img {
   color: var(--neon);
 }
 
+.footer-links .icon-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.3s var(--ease), transform 0.3s var(--ease);
+}
+
+.footer-links .icon-link i {
+  font-size: 1.5rem;
+  animation: neonPulse 2s ease-in-out infinite;
+}
+
+.footer-links .icon-link:hover {
+  color: color-mix(in srgb, var(--neon) 78%, var(--text));
+  transform: translateY(-1px);
+}
+
+.footer-links .icon-link:hover i {
+  animation-duration: 0.95s;
+  transform: scale(1.08);
+}
+
+.footer-links .icon-link[href*="instagram"] i {
+  color: #ff4fd8;
+  text-shadow:
+    0 0 6px rgba(255, 79, 216, 0.75),
+    0 0 14px rgba(255, 79, 216, 0.58),
+    0 0 26px rgba(255, 79, 216, 0.46);
+}
+
+.footer-links .icon-link[href*="whatsapp"] i {
+  color: #39ff8d;
+  text-shadow:
+    0 0 6px rgba(57, 255, 141, 0.75),
+    0 0 14px rgba(57, 255, 141, 0.58),
+    0 0 26px rgba(57, 255, 141, 0.46);
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -782,6 +822,17 @@ img {
 
 .show-on-load {
   animation: showOnLoad 1.15s var(--ease) both;
+}
+
+@keyframes neonPulse {
+  0%, 100% {
+    filter: brightness(1);
+    opacity: 0.85;
+  }
+  50% {
+    filter: brightness(1.4);
+    opacity: 1;
+  }
 }
 
 
