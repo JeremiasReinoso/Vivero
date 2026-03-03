@@ -153,7 +153,7 @@ if (adviceSubmit) {
     if (!selectedAdviceOption) return;
 
     const message = `Hola, necesito asesoramiento para un espacio con ${selectedAdviceOption}.`;
-    const whatsappUrl = `https://wa.me/5491100000000?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/542944312022?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   });
 }
@@ -186,7 +186,7 @@ function getStoreStatus() {
 
   return { isOpen, isSunday };
 }
-
+//Función para mostrar el estado del local(la hora se actualiza cada minuto para mantener la información precisa).
 function renderStoreStatus() {
   if (!storeStatus) return;
   const textEl = storeStatus.querySelector(".status-text");
