@@ -784,6 +784,34 @@ img {
   animation: showOnLoad 1.15s var(--ease) both;
 }
 
+.footer-links .icon-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.footer-links .icon-link i {
+  font-size: 1.5rem;
+}
+
+.footer-links .icon-link:hover i {
+  color: var(--neon);
+}
+
+.footer-links .icon-link[href*="instagram"] i {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 900;
+  content: "\f16d";
+}
+
+.footer-links .icon-link[href*="whatsapp"] i {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 900;
+  content: "\f232b";
+}
+
 @keyframes showOnLoad {
   from {
     opacity: 0;
